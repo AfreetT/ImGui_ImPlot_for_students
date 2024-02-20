@@ -1,0 +1,1 @@
+clear && cmake .. && cmake --build . && ./Project
