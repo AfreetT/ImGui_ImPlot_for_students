@@ -120,7 +120,7 @@ ImGuiContext_OGL::ImGuiContext_OGL() {
 #endif
 
     // Create window with graphics context
-    window = glfwCreateWindow(1280, 720, "Main window title", NULL, NULL);
+    window = glfwCreateWindow(1280, 720, "PIMM app", NULL, NULL);
     if (window == NULL)
         throw std::invalid_argument("Failed to setup window");
     glfwMakeContextCurrent(window);
