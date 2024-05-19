@@ -6,6 +6,7 @@ project(Project)
 set(CMAKE_CXX_STANDARD 20)
 
 # Find OpenGL
+set(OpenGL_GL_PREFERENCE LEGACY)
 find_package(OpenGL REQUIRED)
 
 set(GLFW_DIR ${CMAKE_CURRENT_SOURCE_DIR}/GLFW)
@@ -44,3 +45,4 @@ target_include_directories(Project PUBLIC ${GLFW_DIR}/include)
 
 # Link OpenGL and GLFW libraries
 target_link_libraries(Project ${OPENGL_gl_LIBRARY} glfw)
+target_compile_options(Project PRIVATE -O2 -Wall)
