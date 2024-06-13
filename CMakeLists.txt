@@ -27,7 +27,7 @@ set(IMGUI_SOURCES
 )
 
 set(OTHER_SOURCES
-   # ${CMAKE_CURRENT_SOURCE_DIR}/functions.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/OtherSources/examples.cpp
 )
 
 # Add executable target
