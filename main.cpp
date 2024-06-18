@@ -7,7 +7,7 @@ int main(int, char**)
     context.setup_and_show();
 
     float slider_value = 0.0f;
-
+    
     while (!glfwWindowShouldClose(context.window))
     {
         context.new_frame();

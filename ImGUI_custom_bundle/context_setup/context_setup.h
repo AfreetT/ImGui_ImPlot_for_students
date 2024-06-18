@@ -18,8 +18,7 @@
 #endif
 
 
-static void glfw_error_callback(int error, const char* description)
-{
+static void glfw_error_callback(int error, const char* description){
     fprintf(stderr, "GLFW Error %d: %s\n", error, description);
 }
 
@@ -36,6 +35,5 @@ public:
     void new_frame();
     void render_frame();
 };
-
 
 

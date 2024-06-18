@@ -34,7 +34,12 @@ set(OTHER_SOURCES
 add_executable(Project main.cpp ${IMGUI_SOURCES} ${OTHER_SOURCES})
 
 find_package(OpenMP)
-target_link_libraries(Project OpenMP::OpenMP_CXX)
+if(OpenMP_FOUND)
+    message(STATUS "OpenMP found")
+    target_link_libraries(Project OpenMP::OpenMP_CXX)
+else()
+    message(STATUS "OpenMP not found")
+endif()
 
 # Include directories for ImGUI
 target_include_directories(Project PUBLIC ${IMGUI_DIR})
